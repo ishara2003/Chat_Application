@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane_main" prefHeight="738.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.Sankalpa.ChatEagle.Clients.controller.ClientViewController">
+   <children>
+      <Pane fx:id="pane_section" layoutX="6.0" prefHeight="656.0" prefWidth="400.0">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="411.0" layoutX="-6.0" opacity="0.71">
+               <image>
+                  <Image url="@../../assests/ezgif-5-7a58957a1a.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="63.0" layoutX="-3.0" layoutY="12.0">
+               <image>
+                  <Image url="@../../assests/pngwing.com.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="12.0" text="Chat Eagle" textFill="#dad2d2">
+               <font>
+                  <Font name="SimSun" size="50.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="362.0" onMouseClicked="#btn_client_close_chat">
+               <image>
+                  <Image url="@../../assests/cancel.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="ScrollPane" layoutX="11.0" layoutY="82.0">
+               <content>
+                  <VBox fx:id="vBoxMsgPane" prefHeight="560.0" prefWidth="377.0">
+                     <children>
+                        <Label fx:id="lbl_name" alignment="CENTER" prefHeight="52.0" prefWidth="400.0">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="31.0" />
+                           </font>
+                        </Label>
+                        <Pane fx:id="pane_second" prefHeight="377.0" prefWidth="302.0" style="-fx-background-color: lightgrey;" visible="false">
+                           <children>
+                              <TextField fx:id="txt_loger_name" layoutX="126.0" layoutY="327.0" onAction="#txt_loger_name_On_Action" promptText="Name" />
+                              <ImageView fitHeight="200.0" fitWidth="199.0" layoutX="101.0" layoutY="27.0">
+                                 <image>
+                                    <Image url="@../../assests/ll.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Pane layoutY="645.0" prefHeight="89.0" prefWidth="411.0">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="411.0" layoutY="-6.0" opacity="0.79">
+               <image>
+                  <Image url="@../../assests/ezgif-5-7a58957a1a.jpg" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txt_client_msg" layoutX="57.0" layoutY="13.0" onAction="#sent_client_msg_On_Action" prefHeight="41.0" prefWidth="273.0" style="-fx-background-color: #ffff; -fx-background-radius: 20px;" stylesheets="@../../assests/CSS/bb.css">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <ImageView layoutX="353.0" layoutY="10.0" onMouseClicked="#send_image_On_Action">
+               <image>
+                  <Image url="@../../assests/icons8-camera-50.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
