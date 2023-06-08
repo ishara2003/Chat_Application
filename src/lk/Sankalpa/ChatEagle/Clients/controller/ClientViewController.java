@@ -36,7 +36,7 @@ public class ClientViewController {
 
     @FXML
     private TextArea server_side_msg;
-    
+
 
     Socket socket ;
     Socket socketImage ;
