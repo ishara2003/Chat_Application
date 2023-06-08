@@ -36,11 +36,7 @@ public class ClientViewController {
 
     @FXML
     private TextArea server_side_msg;
-
-    private Stage primaryStage;
-    private VBox vBox;
-
-//    private FlowPane flowPane;
+    
 
     Socket socket ;
     Socket socketImage ;
@@ -56,7 +52,6 @@ public class ClientViewController {
         pane_second.setVisible(true);
         pane_second.setOpacity(1);
         pane_section.setOpacity(0.6);
-//        pane_second.setStyle("-fx-border-radius: 10px");
 
 
         lbl_name.setText(txt_loger_name.getText());
